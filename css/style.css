@@ -1,0 +1,210 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    position: relative; /* натягиваем картинку на меню + .subheader   position: absolute; +width: 100%; так же меняем */
+}
+
+nav {
+    height: 50px;
+    background-color: #212121;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    /* выравнивание по горизонтали */
+    padding: 13px 70px;
+    margin: 0;
+    list-style-type: none;
+    /* убираем из списка кругляшки */
+}
+
+.menu .menu_link {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.menu .menu_item {
+    border-right: 2px dotted /* точечная граница */black; 
+    padding-right: 28px;/* ставим точечную границу между двумя элеметнами */
+}
+
+/* вторая часть навигации */
+.subheader {
+    height: 84px;
+    background-color: rgba(0,0,0, .6); /* три нуля это черный цвет, альфа-канал .6 это 60% прозрачности */
+    position: absolute; /* натягиваем задний фон на меню + надо изменить родительский header*/
+    width: 100%; /* натягиваем задний фон на меню иначе плющит */
+}
+
+.subheader .subheader_logo{
+    display: block;/* ссылка - строчный элемент, чтобы был margin надо сделать его блочным */
+    max-width: 100%; /* на будущее, если лого будет больше, он будет занимать всю площадь 100% колонки. чтобы не был обрезанным */
+    margin-top: 16px;
+} 
+
+.subheader .subheader_official {
+    mask-type: 6px;
+    opacity: 0.5;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 400;
+
+}
+
+.subheader .subheader_call {
+    margin-top: 19px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 300;
+    text-align: right;
+}
+
+.subheader .subheader_phone {
+    display: block; /* ссылка это строчный элемент, мы ее делаем для работы с ней блочный */
+    margin-top: 8px;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: right;
+    line-height: 12px;
+}
+
+.subheader .subheader_btn {
+    margin-top: 19px;
+    width: 172px;
+    height: 46px;
+    box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12);
+    border: none;
+    border-radius: 8px; /* закругление кнопки */
+    background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%);
+
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.promo { /* секция общая */
+    min-height: 800px; /* устанавливаем минимальную высоту секции (где авто) */
+    background: url('../img/auto.jpg')center center/cover no-repeat; /*cover это авто выравнивание на любой экран. располагаем по центру и не повторяем */
+    padding: 150px 0 135px 0;
+   /*  transform: translateY(84px); 2 вариант как можно натянуть задний фон на меню
+    z-index: 1; + надо поменять в шапке .subheader   z-index: 2; + .subheader pozititon: relative */
+}
+
+.promo .promo_header {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 60px;
+    margin: 0;
+    text-align: center;
+}
+
+.promo .promo_subheader {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 36px;
+    margin: 0;
+    margin-top: 22px;
+    text-align: center;
+}
+
+.promo .promo_descr {
+    margin-top: 23px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+}
+
+.promo .promo_btn {
+    display: block; /* кнопка инлайн блок элемент */ 
+    margin: 118px auto 0 auto;
+    width: 259px;
+    height: 63px;
+    box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12);
+    border: 3px solid rgba(0, 0, 0, 0.07);
+    border: none;
+    border-radius: 8px;
+
+    background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%); /* текст кнопки */
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21);
+    color: #ffffff; 
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.reasons {
+    margin: 71px 0 65px 0;
+}
+
+.lable {
+    margin: 0 auto;  /* позиционирует текст по середине */
+    padding: 5px 12px;
+    width: 112px; /* задаем длинну и ширину для текста */
+    height: 24px;
+    background-color: #000000;
+    
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.title {
+    margin-top: 38px;
+    margin-bottom: 0px;
+    color: #222222;
+    font-size: 38px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;  
+}
+
+.reasons .reasons_block {
+    display: flex;    /* основной блок */ 
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.reasons .reasons_block .reasons_round { /* здесь лого */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 26px;
+}
+
+.reasons .reasons_block .reasons_descr {
+    width: 343px;
+}
+
+.reasons .reasons_block .reasons_descr .reasons_subtitle {
+    color: #1eacc7;
+    font-size: 17px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.reasons .reasons_block .reasons_descr .reasons_text {
+    color: #202020;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 21px;   
+}
+
+
+
